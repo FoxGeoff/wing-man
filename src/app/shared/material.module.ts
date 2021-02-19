@@ -10,7 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { FlexLayoutModule } from '@angular/flex-layout';
+// import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
 
@@ -29,7 +29,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatSnackBarModule,
     MatExpansionModule,
     MatSelectModule,
-    FlexLayoutModule
+   // FlexLayoutModule
   ],
   exports: [
     LayoutModule,
@@ -44,7 +44,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatSnackBarModule,
     MatExpansionModule,
     MatSelectModule,
-    FlexLayoutModule
+    // FlexLayoutModule
   ],
   declarations: []
 })
