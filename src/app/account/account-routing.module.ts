@@ -1,0 +1,22 @@
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { AccountsComponent } from './accounts/accounts.component';
+import { AddAccountComponent } from './add-account/add-account.component';
+
+
+
+const routes: Routes = [{
+  path: '',
+  pathMatch: 'full',
+  component: AccountsComponent
+}, {
+  path: 'add-book',
+  pathMatch: 'full',
+  component: AddAccountComponent
+}];
+
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+export class AccountRoutingModule { }

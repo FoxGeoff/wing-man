@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Reference documents
 
-1. Design: <https://material.io/develop/web >
+1. Design: <https://material.io/develop/web>
 
 ### Task: Add Angular Material
 
@@ -23,3 +23,24 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 5. Test Ref: <https://github.com/angular/flex-layout/wiki/Declarative-API-Overview>
 
 ### Task: Add Accounts Component
+
+1. HERE> Error: Cannot find module './account/account.module'
+2. NOTE: Lazy loading is updated to
+
+```TypeScript
+const routes: Routes = [
+  {
+    path: 'customers',
+    loadChildren: () => import('./customer/customer.module').then(m => m.CustomerModule)
+  },
+  {
+    path: 'invoices',
+    loadChildren: () => import('./invoice/invoice.module').then(m => m.InvoiceModule)
+  },
+  {
+    path: '',
+    redirectTo: 'customers',
+    pathMatch: 'full'
+  }
+];
+```
