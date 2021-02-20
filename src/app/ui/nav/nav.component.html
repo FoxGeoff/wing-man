@@ -22,14 +22,14 @@
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span>BookStore</span>
+      <span><mat-icon>flight_takeoff</mat-icon><small>WingMan</small></span>
         <span class="spacer"></span>
           <span>
             <a class="bg-color" routerLink="/books/add-book">
-              Add Book
+              +Book
             </a>
             <a class="bg-color" routerLink="/users/add-user">
-              Add User
+              +User
             </a>
           </span>
     </mat-toolbar>
