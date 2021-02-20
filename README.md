@@ -18,3 +18,4 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 2. Run: ```npm i -s @angular/flex-layout @angular/cdk```
 3. Update material.module
 4. NOTE: RE-START THE SERVER IS REQUIRED
+5. Test Ref: <https://github.com/angular/flex-layout/wiki/Declarative-API-Overview>
