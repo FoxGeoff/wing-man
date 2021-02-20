@@ -46,3 +46,9 @@ const routes: Routes = [
   }
 ];
 ```
+
+## Kanban Task: Accounts COmponent
+
+1. Back button
+2. ref <https://stackoverflow.com/questions/35446955/how-to-go-back-last-page>
+3. ref<https://www.tektutorialshub.com/angular/angular-location-service/>
