@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Reference documents
 
+1. (new route syntax) \Github\Ai_Project2020-3
+
 1. Design: <https://material.io/develop/web>
 
 ### Task: Add Angular Material
