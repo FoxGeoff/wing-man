@@ -2,7 +2,9 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
 
-## Development server
+## Reference documents
+
+1. Design: <https://material.io/develop/web >
 
 ### Task: Add Angular Material
 
@@ -19,3 +21,5 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 3. Update material.module
 4. NOTE: RE-START THE SERVER IS REQUIRED
 5. Test Ref: <https://github.com/angular/flex-layout/wiki/Declarative-API-Overview>
+
+### Task: Add Accounts Component
