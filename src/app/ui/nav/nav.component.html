@@ -9,8 +9,50 @@
   >
     <mat-toolbar color="primary">Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="/books">Books</a>
-      <a mat-list-item routerLink="/users">Users</a>
+      <h3 matSubheader>Contacts</h3>
+      <a mat-list-item routerLink="/accounts"
+        ><mat-icon matListIcon>folder</mat-icon>Accounts</a
+      >
+      <a mat-list-item routerLink="/accounts"
+        ><mat-icon matListIcon>folder</mat-icon>Contact Groups</a
+      >
+      <mat-divider></mat-divider>
+
+      <h3 matSubheader>QuickQuote</h3>
+      <a mat-list-item routerLink="/accounts"
+        ><mat-icon matListIcon>folder</mat-icon>Price Calculator</a
+      >
+      <a mat-list-item routerLink="/accounts"
+        ><mat-icon matListIcon>folder</mat-icon>New Quote</a
+      >
+      <a mat-list-item routerLink="/accounts"
+        ><mat-icon matListIcon>folder</mat-icon>Quotes</a
+      >
+      <a mat-list-item routerLink="/accounts"
+        ><mat-icon matListIcon>folder</mat-icon>Quote Template</a
+      >
+      <mat-divider></mat-divider>
+
+      <h3 matSubheader>Production</h3>
+      <a mat-list-item routerLink="/accounts"
+        ><mat-icon matListIcon>folder</mat-icon>Orders</a
+      ><a mat-list-item routerLink="/accounts"
+        ><mat-icon matListIcon>folder</mat-icon>Jobs Board</a
+      ><a mat-list-item routerLink="/accounts"
+        ><mat-icon matListIcon>folder</mat-icon>Invoices</a
+      >
+      <mat-divider></mat-divider>
+
+      <h3 matSubheader>Resources</h3>
+      <a mat-list-item routerLink="/accounts"
+        ><mat-icon matListIcon>folder</mat-icon>Products</a
+      >
+      <a mat-list-item routerLink="/accounts"
+        ><mat-icon matListIcon>folder</mat-icon>Finishing Options
+      </a>
+      <a mat-list-item routerLink="/accounts"
+        ><mat-icon matListIcon>folder</mat-icon>Services</a
+      >
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -37,15 +79,23 @@
         </button>
       </mat-menu>
 
-      <button mat-button [matMenuTriggerFor]="QuickQuoteMenu">QuickQuote</button>
+      <button mat-button [matMenuTriggerFor]="QuickQuoteMenu">
+        QuickQuote
+      </button>
       <mat-menu #QuickQuoteMenu="matMenu" yPosition="below">
-        <button mat-menu-item><a routerLink="/accounts">Price Calculator</a></button>
+        <button mat-menu-item>
+          <a routerLink="/accounts">Price Calculator</a>
+        </button>
         <button mat-menu-item><a routerLink="/accounts">New Quote</a></button>
         <button mat-menu-item><a routerLink="/accounts">Quotes</a></button>
-        <button mat-menu-item><a routerLink="/accounts">Quote Template</a></button>
+        <button mat-menu-item>
+          <a routerLink="/accounts">Quote Template</a>
+        </button>
       </mat-menu>
 
-      <button mat-button [matMenuTriggerFor]="productionMenu">Production</button>
+      <button mat-button [matMenuTriggerFor]="productionMenu">
+        Production
+      </button>
       <mat-menu #productionMenu="matMenu" yPosition="below">
         <button mat-menu-item><a routerLink="/accounts">Orders</a></button>
         <button mat-menu-item><a routerLink="/accounts">Jobs Board</a></button>
@@ -55,26 +105,13 @@
       <button mat-button [matMenuTriggerFor]="resourcesMenu">Resources</button>
       <mat-menu #resourcesMenu="matMenu" yPosition="below">
         <button mat-menu-item><a routerLink="/accounts">Products</a></button>
-        <button mat-menu-item><a routerLink="/accounts">Finishing Options</a></button>
+        <button mat-menu-item>
+          <a routerLink="/accounts">Finishing Options</a>
+        </button>
         <button mat-menu-item><a routerLink="/accounts">Services</a></button>
       </mat-menu>
-
-      <!--
-          <span>
-            <a class="bg-color" routerLink="/books/add-book">
-              +Book
-            </a>
-            <a class="bg-color" routerLink="/users/add-user">
-              +User
-            </a>
-          </span> -->
     </mat-toolbar>
     <!-- Add Content Here -->
-    <div fxLayout="row" fxLayoutAlign="space-evenly">
-      <div>layout one</div>
-      <div>layout two</div>
-      <div>layout three</div>
-    </div>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
