@@ -47,8 +47,9 @@ const routes: Routes = [
 ];
 ```
 
-## Kanban Task: Accounts COmponent
+## Kanban Task: Accounts Component
 
 1. Back button
 2. ref <https://stackoverflow.com/questions/35446955/how-to-go-back-last-page>
 3. ref<https://www.tektutorialshub.com/angular/angular-location-service/>
+4. Add nav menu items

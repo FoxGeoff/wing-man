@@ -13,6 +13,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatSelectModule } from '@angular/material/select';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   imports: [
@@ -44,7 +45,8 @@ import { MatSelectModule } from '@angular/material/select';
     MatSnackBarModule,
     MatExpansionModule,
     MatSelectModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatMenuModule
   ],
   declarations: []
 })
