@@ -71,7 +71,7 @@
 
       <button mat-button [matMenuTriggerFor]="contactsMenu">Contacts</button>
       <!-- #docregion menu-position -->
-      <mat-menu #contactsMenu="matMenu" yPosition="below">
+      <mat-menu #contactsMenu="matMenu">
         <!-- #enddocregion menu-position -->
         <button mat-menu-item><a routerLink="/accounts">Accounts</a></button>
         <button mat-menu-item>
@@ -82,7 +82,7 @@
       <button mat-button [matMenuTriggerFor]="QuickQuoteMenu">
         QuickQuote
       </button>
-      <mat-menu #QuickQuoteMenu="matMenu" yPosition="below">
+      <mat-menu #QuickQuoteMenu="matMenu">
         <button mat-menu-item>
           <a routerLink="/accounts">Price Calculator</a>
         </button>
@@ -96,14 +96,14 @@
       <button mat-button [matMenuTriggerFor]="productionMenu">
         Production
       </button>
-      <mat-menu #productionMenu="matMenu" yPosition="below">
+      <mat-menu #productionMenu="matMenu">
         <button mat-menu-item><a routerLink="/accounts">Orders</a></button>
         <button mat-menu-item><a routerLink="/accounts">Jobs Board</a></button>
         <button mat-menu-item><a routerLink="/accounts">Invoices</a></button>
       </mat-menu>
 
       <button mat-button [matMenuTriggerFor]="resourcesMenu">Resources</button>
-      <mat-menu #resourcesMenu="matMenu" yPosition="below">
+      <mat-menu #resourcesMenu="matMenu">
         <button mat-menu-item><a routerLink="/accounts">Products</a></button>
         <button mat-menu-item>
           <a routerLink="/accounts">Finishing Options</a>

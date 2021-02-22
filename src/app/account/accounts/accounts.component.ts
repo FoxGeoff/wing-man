@@ -29,7 +29,7 @@ const NAMES: string[] = [
   templateUrl: './accounts.component.html',
   styleUrls: ['./accounts.component.css']
 })
-export class AccountsComponent implements AfterViewInt{
+export class AccountsComponent implements AfterViewInit{
 
   displayedColumns: string[] = ['id', 'name', 'progress', 'color'];
   dataSource: MatTableDataSource<UserData>;
@@ -45,7 +45,6 @@ export class AccountsComponent implements AfterViewInt{
     this.dataSource = new MatTableDataSource(users);
   }
 
-  // tslint:disable-next-line:use-lifecycle-interface
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
