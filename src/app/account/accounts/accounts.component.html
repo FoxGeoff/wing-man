@@ -4,7 +4,11 @@
     <mat-toolbar>
       <span><mat-icon>account_balance_wallet</mat-icon>Accounts </span>
       <span class="spacer"></span>
-      <span><button mat-raised-button color="primary">Add</button></span>
+      <span>
+        <a mat-raised-button color="primary" routerLink="/accounts/add-account"
+          >Add</a
+        ></span
+      >
     </mat-toolbar>
 
     <mat-form-field>
@@ -35,7 +39,6 @@
 
     <div class="mat-elevation-z8">
       <table mat-table [dataSource]="dataSource" matSort>
-        
         <!-- ID Column -->
         <ng-container matColumnDef="id">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>

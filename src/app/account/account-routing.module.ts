@@ -6,6 +6,7 @@ import { AddAccountComponent } from './add-account/add-account.component';
 
 
 const routes: Routes = [{
+  // http://localhost:4200/accounts
   path: '',
   pathMatch: 'full',
   component: AccountsComponent
