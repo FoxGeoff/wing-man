@@ -10,6 +10,7 @@ const routes: Routes = [{
   pathMatch: 'full',
   component: AccountsComponent
 }, {
+  // http://localhost:4200/accounts/add-account
   path: 'add-account',
   pathMatch: 'full',
   component: AddAccountComponent
