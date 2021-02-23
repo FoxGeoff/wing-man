@@ -7,6 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 1. (new route syntax) \Github\Ai_Project2020-3
 
 1. Design: <https://material.io/develop/web>
+2. Flex Layout <https://www.angularjswiki.com/flexlayout/basics>
 
 ### Task: Add Angular Material
 
