@@ -10,7 +10,7 @@ const routes: Routes = [{
   pathMatch: 'full',
   component: AccountsComponent
 }, {
-  path: 'add-book',
+  path: 'add-account',
   pathMatch: 'full',
   component: AddAccountComponent
 }];
