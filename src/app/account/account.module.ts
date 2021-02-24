@@ -7,13 +7,15 @@ import { SharedModule } from '../shared/shared.module';
 
 import { AccountsComponent } from './accounts/accounts.component';
 import { AddAccountComponent } from './add-account/add-account.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';
 
 
 
 @NgModule({
   declarations: [
     AccountsComponent,
-    AddAccountComponent
+    AddAccountComponent,
+    AccountDetailsComponent
   ],
   imports: [
     CommonModule,

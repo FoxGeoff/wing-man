@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AccountDetailsComponent } from './account-details/account-details.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { AddAccountComponent } from './add-account/add-account.component';
 
@@ -15,6 +16,11 @@ const routes: Routes = [{
   path: 'add-account',
   pathMatch: 'full',
   component: AddAccountComponent
+}, {
+  // http://localhost:4200/accounts/account-details
+  path: 'account-details',
+  pathMatch: 'full',
+  component: AccountDetailsComponent
 }];
 
 @NgModule({
