@@ -6,6 +6,9 @@ const routes: Routes = [
     path: 'accounts',
     loadChildren: () => import('./account/account.module').then(m => m.AccountModule)
   }, {
+    path: 'contacts',
+    loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
+  }, {
     path: '',
     redirectTo: 'accounts',
     pathMatch: 'full'
