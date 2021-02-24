@@ -60,3 +60,7 @@ const routes: Routes = [
 2. Ref:<https://material.angular.io/components/table/examples#table-overview>
 
 ### Task: Add: Add Account
+
+### Task: Add: Add Contact
+
+## Kanban Task: Add: Quotes Component
