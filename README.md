@@ -7,6 +7,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 1. (new route syntax) \Github\Ai_Project2020-3
 2. Design: <https://material.io/develop/web>
 3. Flex Layout <https://www.angularjswiki.com/flexlayout/basics>
+4. Design: products list github/meanstack
 
 ### Task: Add Angular Material
 
@@ -64,3 +65,7 @@ const routes: Routes = [
 ### Task: Add: Add Contact
 
 ## Kanban Task: Add: Quotes Component
+
+## Kanban Task: Products
+
+### Task: Add Routing for - products, add-product, edit-product, product-details

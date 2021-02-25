@@ -11,6 +11,9 @@ const routes: Routes = [
   }, {
     path: 'quotes',
     loadChildren: () => import('./quote/quote.module').then(m => m.QuoteModule)
+  },  {
+    path: 'products',
+    loadChildren: () => import('./product/product.module').then(m => m.ProductModule)
   }, {
     path: '',
     redirectTo: 'accounts',

@@ -22,7 +22,6 @@ const routes: Routes = [{
   component: QuoteCalculatorComponent
 }];
 
-
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
