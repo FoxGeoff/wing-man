@@ -69,3 +69,5 @@ const routes: Routes = [
 ## Kanban Task: Products
 
 ### Task: Add Routing for - products, add-product, edit-product, product-details
+
+### Task: Add Products template
