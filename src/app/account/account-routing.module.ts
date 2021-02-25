@@ -4,8 +4,6 @@ import { AccountDetailsComponent } from './account-details/account-details.compo
 import { AccountsComponent } from './accounts/accounts.component';
 import { AddAccountComponent } from './add-account/add-account.component';
 
-
-
 const routes: Routes = [{
   // http://localhost:4200/accounts
   path: '',

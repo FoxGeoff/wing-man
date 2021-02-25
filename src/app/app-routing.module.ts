@@ -9,6 +9,9 @@ const routes: Routes = [
     path: 'contacts',
     loadChildren: () => import('./contact/contact.module').then(m => m.ContactModule)
   }, {
+    path: 'quotes',
+    loadChildren: () => import('./quote/quote.module').then(m => m.QuoteModule)
+  }, {
     path: '',
     redirectTo: 'accounts',
     pathMatch: 'full'
