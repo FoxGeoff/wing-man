@@ -26,7 +26,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Task: Add Accounts Component
 
-1. HERE> Error: Cannot find module './account/account.module'
+1. HERE> Error: Cannot find module './account/account.module' DONE
 2. NOTE: Lazy loading is updated to
 
 ```TypeScript
