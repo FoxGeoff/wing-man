@@ -1,9 +1,9 @@
 <span>quotes works!</span>
 
-<mat-list *ngFor= "let quote of quotes">
+<mat-list dense *ngFor="let quote of quotes">
   <mat-list>
-    <h3 mat-list>{{quote.id}} {{quote.name}} </h3>
-    <p mat-list-item>{{quote.price | currency}}/{{quote.unit}}</p>
-    <p mat-list-item>{{quote.description}}</p>
+    <h3 mat-list>{{ quote.id }} {{ quote.name }}</h3>
+    <p mat-list-item>{{ quote.price | currency }}/{{ quote.unit }}</p>
+    <p mat-list-item>{{ quote.description }}</p>
   </mat-list>
 </mat-list>
