@@ -71,3 +71,5 @@ const routes: Routes = [
 ### Task: Add Routing for - products, add-product, edit-product, product-details
 
 ### Task: Add Products template
+
+1. Add Products data and display as list
