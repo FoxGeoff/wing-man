@@ -1,1 +1,9 @@
 <p>quotes works!</p>
+
+<ul *ngFor= "let quote of quotes">
+  <li>
+    <p>{{quote.id}} {{quote.name}}</p>
+    <p>{{quote.price | currency}}/{{quote.unit}}</p>
+    <p>{{quote.description}}</p>
+  </li>
+</ul>
