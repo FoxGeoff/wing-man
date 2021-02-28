@@ -77,3 +77,6 @@ const routes: Routes = [
 3. Ref.<https://github.com/snics/ng2-avatar>
 
 ### Task: Add account-table component
+
+1. Ref. <https://github.com/CodeMazeBlog/angular-material-series>
+
