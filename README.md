@@ -79,4 +79,4 @@ const routes: Routes = [
 ### Task: Add account-table component
 
 1. Ref. <https://github.com/CodeMazeBlog/angular-material-series>
-
+2. Ref. <https://github.com/CodeMazeBlog/angular-material-series/tree/material-table>
