@@ -75,3 +75,5 @@ const routes: Routes = [
 1. Add Products data and display as list
 2. install ```npm ng2-avatar```
 3. Ref.<https://github.com/snics/ng2-avatar>
+
+### Task: Add account-table component

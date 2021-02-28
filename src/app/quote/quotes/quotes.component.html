@@ -1,9 +1,14 @@
 <span>quotes works!</span>
-
+<div>
 <mat-list dense *ngFor="let quote of quotes">
   <mat-list>
     <h3 mat-list>{{ quote.id }} {{ quote.name }}</h3>
-    <p mat-list-item>{{ quote.price | currency }}/{{ quote.unit }}</p>
-    <p mat-list-item>{{ quote.description }}</p>
+    <div mat-list-item>{{ quote.price | currency }}/{{ quote.unit }}</div>
+    <div mat-list-item>{{ quote.description }}</div>
   </mat-list>
 </mat-list>
+<mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]">
+</mat-paginator>
+</div>
