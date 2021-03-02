@@ -83,9 +83,9 @@ const routes: Routes = [
 
 ## Kanban Task: Add in memory api
 
-### Task: run ```npm i angular2-in-memory-web-api```
+### Task: run ```npm i angular-in-memory-web-api```
 
-1. ref.: <https://www.npmjs.com/package/angular2-in-memory-web-api>
+1. ref.: <https://www.npmjs.com/package/angular-in-memory-web-api>
 2. reference code:
 
 ### Add app-data
