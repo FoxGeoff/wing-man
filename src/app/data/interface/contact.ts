@@ -11,9 +11,7 @@ export interface Contact {
   state: string;
   zip: number;
   country: string;
-  taxId?: number;
-  paymentTerms: string;
-  emailPrime: number;
-  phonePrime: number;
+  email: number;
+  phone: number;
   accountId: number;
 }
