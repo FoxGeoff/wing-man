@@ -86,6 +86,37 @@ const routes: Routes = [
 ### Task: run ```npm i angular-in-memory-web-api```
 
 1. ref.: <https://www.npmjs.com/package/angular-in-memory-web-api>
-2. reference code:
+2. reference code project: github/in-mem-db
+3. reference code
 
-### Add app-data
+```Typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+// in-memmory-db
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { DataService } from './data/data.service';
+
+import { AppComponent } from './app.component';
+import { ProductsComponent } from './product/products/products.component';
+
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    ProductsComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(DataService, {delay: 1000})
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+### Task: Add app-data
+
+### Task: Add data files (dummy)
