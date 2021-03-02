@@ -15,4 +15,5 @@ export interface Account {
   email: number;
   phone: number;
   contactIds?: number[];
+  groupIds?: number[];
 }
