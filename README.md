@@ -98,7 +98,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { DataService } from './data/data.service';
 
 import { AppComponent } from './app.component';
-import { ProductsComponent } from './product/products/products.component';
+import { ProductsComponent } from './product/products/products.component'; // TODO: change to accounts
 
 
 @NgModule({
@@ -120,3 +120,5 @@ export class AppModule { }
 ### Task: Add app-data
 
 ### Task: Add data files (dummy)
+
+### Task: Update  in-memory-db data to "accounts" <= here @ 11:30am
