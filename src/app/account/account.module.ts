@@ -8,6 +8,7 @@ import { SharedModule } from '../shared/shared.module';
 import { AccountsComponent } from './accounts/accounts.component';
 import { AddAccountComponent } from './add-account/add-account.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
+import { AccountsListComponent } from './accounts-list/accounts-list.component';
 
 
 
@@ -15,7 +16,8 @@ import { AccountDetailsComponent } from './account-details/account-details.compo
   declarations: [
     AccountsComponent,
     AddAccountComponent,
-    AccountDetailsComponent
+    AccountDetailsComponent,
+    AccountsListComponent
   ],
   imports: [
     CommonModule,

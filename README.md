@@ -121,4 +121,6 @@ export class AppModule { }
 
 ### Task: Add data files (dummy)
 
-### Task: Update  in-memory-db data to "accounts" <= here @ 11:30am
+### Task: Update  in-memory-db data to "accounts"
+
+1. Add accounts-list component

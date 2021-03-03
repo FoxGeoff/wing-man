@@ -10,9 +10,9 @@ export interface Account {
   state: string;
   zip: number;
   country: string;
-  taxId?: number;
+  taxId?: string;
   paymentTerms: string;
-  email: number;
+  email: string;
   phone: number;
   contactIds?: number[];
   groupIds?: number[];
