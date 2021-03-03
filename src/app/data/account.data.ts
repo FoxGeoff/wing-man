@@ -16,7 +16,7 @@ export class AccountData {
       country: 'USA',
       taxId: 'T124-456-7777',
       paymentTerms: '30Net',
-      email: 'sales@AccountModule.com',
+      email: 'sales@acme.com',
       phone: 619333475
     }, {
       id: 2,
@@ -30,7 +30,7 @@ export class AccountData {
       country: 'USA',
       taxId: 'T124-456-7777',
       paymentTerms: '30Net',
-      email: 'sales@AccountModule.com',
+      email: 'sales@acme.com',
       phone: 619333475
     }, {
       id: 3,
@@ -44,7 +44,7 @@ export class AccountData {
       country: 'USA',
       taxId: 'T124-456-7777',
       paymentTerms: '30Net',
-      email: 'sales@AccountModule.com',
+      email: 'sales@acme.com',
       phone: 619333475
     }
   ];
