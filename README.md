@@ -124,3 +124,4 @@ export class AppModule { }
 ### Task: Update  in-memory-db data to "accounts"
 
 1. Add accounts-list component
+2. Material Table with select

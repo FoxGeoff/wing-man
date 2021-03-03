@@ -32,7 +32,7 @@ const NAMES: string[] = [
 })
 export class AccountsComponent implements AfterViewInit {
 
-  displayedColumns: string[] = ['id', 'name', 'progress', 'color'];
+  displayedColumns: string[] = ['select', 'id', 'name', 'progress', 'color'];
   dataSource: MatTableDataSource<UserData>;
   selection = new SelectionModel<UserData>(true, []);
 
