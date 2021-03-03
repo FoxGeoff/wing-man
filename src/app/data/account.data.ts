@@ -17,12 +17,12 @@ export class AccountData {
       taxId: 'T124-456-7777',
       paymentTerms: '30Net',
       email: 'sales@acme.com',
-      phone: 619333475
+      phone: 6193334751
     }, {
       id: 2,
-      name: 'Acme Carpet Cleaning',
-      website: 'acme.com',
-      description: 'A local carpet cleaning service',
+      name: 'Bee Property Management',
+      website: 'bee.com',
+      description: 'Business park "bee"',
       street: '123 Main St.',
       city: 'San Diego',
       state: 'CA',
@@ -30,13 +30,13 @@ export class AccountData {
       country: 'USA',
       taxId: 'T124-456-7777',
       paymentTerms: '30Net',
-      email: 'sales@acme.com',
-      phone: 619333475
+      email: 'sales@bee.com',
+      phone: 6195642222
     }, {
       id: 3,
-      name: 'Acme Carpet Cleaning',
-      website: 'acme.com',
-      description: 'A local carpet cleaning service',
+      name: 'GSA',
+      website: 'gsa-serv.com',
+      description: 'Federal Services',
       street: '123 Main St.',
       city: 'San Diego',
       state: 'CA',
@@ -44,8 +44,8 @@ export class AccountData {
       country: 'USA',
       taxId: 'T124-456-7777',
       paymentTerms: '30Net',
-      email: 'sales@acme.com',
-      phone: 619333475
+      email: 'sales@gsa-serv.com',
+      phone: 8003336575
     }
   ];
 }
