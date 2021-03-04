@@ -3,6 +3,7 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { AccountService } from '../account.service';
 
 export interface UserData {
   id: string;
@@ -22,7 +23,7 @@ const NAMES: string[] = [
 ];
 
 /**
- * @title Data table with sorting, pagination, and filtering.
+ * @title Data table with select, sorting, pagination, and filtering.
  */
 
 @Component({
@@ -32,14 +33,15 @@ const NAMES: string[] = [
 })
 export class AccountsComponent implements AfterViewInit {
 
-  displayedColumns: string[] = ['select', 'id', 'name', 'progress', 'color'];
+  displayedColumns: string[] = ['select', 'id', 'name', 'description', 'color'];
   dataSource: MatTableDataSource<UserData>;
   selection = new SelectionModel<UserData>(true, []);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor() {
+  constructor(private accountService: AccountService) {
+
     // Create 100 users
     const users = Array.from({ length: 100 }, (_, k) => createNewUser(k + 1));
 
