@@ -33,7 +33,7 @@ const NAMES: string[] = [
 })
 export class AccountsComponent implements AfterViewInit {
 
-  displayedColumns: string[] = ['select', 'id', 'name', 'description', 'color'];
+  displayedColumns: string[] = ['select', 'id', 'name', 'description', 'color', 'details', 'update', 'delete'];
   dataSource: MatTableDataSource<UserData>;
   selection = new SelectionModel<UserData>(true, []);
 
@@ -86,6 +86,20 @@ export class AccountsComponent implements AfterViewInit {
       return `${this.isAllSelected() ? 'select' : 'deselect'} all`;
     }
     return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.id + 1}`;
+  }
+
+  /** Detail, Update and Delete stubs */
+  public redirectToDetails = (id: string) => {
+      console.log(`Detail item ${id}`);
+  }
+
+  public redirectToUpdate = (id: string) => {
+    console.log(`Update item ${id}`);
+
+  }
+
+  public redirectToDelete = (id: string) => {
+    console.log(`Delete item ${id}`);
   }
 
 }

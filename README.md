@@ -125,3 +125,5 @@ export class AppModule { }
 
 1. Add accounts-list component
 2. Material Table with select
+3. Material Table with: details, update and delete
+4. Code ref: <https://github.com/CodeMazeBlog/angular-material-series/blob/material-table/ang-material-OwnerAccount/src/app/owner/owner-list/owner-list.component.html>
