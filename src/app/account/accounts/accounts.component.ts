@@ -6,6 +6,21 @@ import { MatTableDataSource } from '@angular/material/table';
 import { RepositoryService } from 'src/app/shared/repository.service';
 import { Account } from '../../data/interface/account';
 
+export class AccountList implements Account {
+  id: 1;
+  name: 'none';
+  description: 'none';
+  street: 'none';
+  city: 'none';
+  state: 'none';
+  zip: 0;
+  country: 'none';
+  paymentTerms: 'none';
+  email: 'none';
+  phone: 0;
+}
+
+
 /**
  * @title Data table with select, sorting, pagination, and filtering.
  */
@@ -17,7 +32,7 @@ import { Account } from '../../data/interface/account';
 })
 export class AccountsComponent implements OnInit, AfterViewInit {
 
-  // data = {} as Account[];
+  accounts = {} as Account[];
 
   displayedColumns: string[] = ['select', 'name', 'description', 'details', 'update', 'delete'];
   dataSource: MatTableDataSource<Account>;
@@ -26,14 +41,23 @@ export class AccountsComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private reproService: RepositoryService) { }
+
+  isNoData = true;
+
+  constructor(private reproService: RepositoryService) {
+
+    // this.dataSource = new MatTableDataSource(this.accounts);
+
+  }
 
   ngOnInit(): void {
     this.reproService.getData('api/accounts')
       .subscribe(
         (data: Account[]) => {
+          this.accounts = data;
           console.log(data);
           this.dataSource = new MatTableDataSource(data);
+          this.isNoData = false;
         }
       );
   }

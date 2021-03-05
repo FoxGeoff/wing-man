@@ -8,6 +8,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 2. Design: <https://material.io/develop/web>
 3. Flex Layout <https://www.angularjswiki.com/flexlayout/basics>
 4. Design: products list github/meanstack
+5. Styling Applications with Angular Material <https://app.pluralsight.com/course-player?clipId=7bb21a82-ca21-46b5-ac8f-da93c462861e>
+6. Styling Applications with Angular Material <https://github.com/ajtowf/styling-applications-with-angular-material>
 
 ### Task: Add Angular Material
 
@@ -127,6 +129,7 @@ export class AppModule { }
 2. Material Table with select
 3. Material Table with: details, update and delete
 4. Code ref: <https://github.com/CodeMazeBlog/angular-material-series/blob/material-table/ang-material-OwnerAccount/src/app/owner/owner-list/owner-list.component.html>
+5. Code ref. 'Styling Applications with Angular Material' for Mataerial Table
 
 ### Task: Add Environment folder and files
 
