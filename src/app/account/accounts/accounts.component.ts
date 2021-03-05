@@ -17,6 +17,8 @@ import { Account } from '../../data/interface/account';
 })
 export class AccountsComponent implements OnInit, AfterViewInit {
 
+  // data = {} as Account[];
+
   displayedColumns: string[] = ['select', 'name', 'description', 'details', 'update', 'delete'];
   dataSource: MatTableDataSource<Account>;
   selection = new SelectionModel<Account>(true, []);
