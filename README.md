@@ -127,3 +127,7 @@ export class AppModule { }
 2. Material Table with select
 3. Material Table with: details, update and delete
 4. Code ref: <https://github.com/CodeMazeBlog/angular-material-series/blob/material-table/ang-material-OwnerAccount/src/app/owner/owner-list/owner-list.component.html>
+
+### Task: Add Environment folder and files
+
+1. Ref. <https://github.com/CodeMazeBlog/angular-material-series/tree/material-table/ang-material-OwnerAccount/src>

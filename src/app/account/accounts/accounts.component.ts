@@ -3,24 +3,8 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { AccountService } from '../account.service';
-
-export interface UserData {
-  id: string;
-  name: string;
-  progress: string;
-  color: string;
-}
-
-/** Constants used to fill up our data base. */
-const COLORS: string[] = [
-  'maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple', 'fuchsia', 'lime', 'teal',
-  'aqua', 'blue', 'navy', 'black', 'gray'
-];
-const NAMES: string[] = [
-  'Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack', 'Charlotte', 'Theodore', 'Isla', 'Oliver',
-  'Isabella', 'Jasper', 'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'
-];
+import { RepositoryService } from 'src/app/shared/repository.service';
+import { Account } from '../../data/interface/account';
 
 /**
  * @title Data table with select, sorting, pagination, and filtering.
@@ -31,22 +15,25 @@ const NAMES: string[] = [
   templateUrl: './accounts.component.html',
   styleUrls: ['./accounts.component.css']
 })
-export class AccountsComponent implements AfterViewInit {
+export class AccountsComponent implements OnInit, AfterViewInit {
 
-  displayedColumns: string[] = ['select', 'id', 'name', 'description', 'color', 'details', 'update', 'delete'];
-  dataSource: MatTableDataSource<UserData>;
-  selection = new SelectionModel<UserData>(true, []);
+  displayedColumns: string[] = ['select', 'name', 'description', 'details', 'update', 'delete'];
+  dataSource: MatTableDataSource<Account>;
+  selection = new SelectionModel<Account>(true, []);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private accountService: AccountService) {
+  constructor(private reproService: RepositoryService) { }
 
-    // Create 100 users
-    const users = Array.from({ length: 100 }, (_, k) => createNewUser(k + 1));
-
-    // Assign the data to the data source for the table to render
-    this.dataSource = new MatTableDataSource(users);
+  ngOnInit(): void {
+    this.reproService.getData('api/accounts')
+      .subscribe(
+        (data: Account[]) => {
+          console.log(data);
+          this.dataSource = new MatTableDataSource(data);
+        }
+      );
   }
 
   ngAfterViewInit() {
@@ -63,9 +50,6 @@ export class AccountsComponent implements AfterViewInit {
     }
   }
 
-  /**
-   * Selection code
-   */
   /** Whether the number of selected elements matches the total number of rows. */
   isAllSelected() {
     const numSelected = this.selection.selected.length;
@@ -81,7 +65,7 @@ export class AccountsComponent implements AfterViewInit {
   }
 
   /** The label for the checkbox on the passed row */
-  checkboxLabel(row?: UserData): string {
+  checkboxLabel(row?: Account): string {
     if (!row) {
       return `${this.isAllSelected() ? 'select' : 'deselect'} all`;
     }
@@ -90,7 +74,7 @@ export class AccountsComponent implements AfterViewInit {
 
   /** Detail, Update and Delete stubs */
   public redirectToDetails = (id: string) => {
-      console.log(`Detail item ${id}`);
+    console.log(`Detail item ${id}`);
   }
 
   public redirectToUpdate = (id: string) => {
@@ -101,19 +85,5 @@ export class AccountsComponent implements AfterViewInit {
   public redirectToDelete = (id: string) => {
     console.log(`Delete item ${id}`);
   }
-
-}
-
-/** Builds and returns a new User. */
-function createNewUser(id: number): UserData {
-  const name = NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
-    NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
-
-  return {
-    id: id.toString(),
-    name,
-    progress: Math.round(Math.random() * 100).toString(),
-    color: COLORS[Math.round(Math.random() * (COLORS.length - 1))]
-  };
 
 }

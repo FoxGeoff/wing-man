@@ -36,7 +36,7 @@ export class AccountsListComponent implements OnInit {
     // https://stackoverflow.com/questions/13142635/how-can-i-create-an-object-based-on-an-interface-file-definition-in-typescript
     // If you want an empty object of an interface, you can do just:
     // tslint:disable-next-line:prefer-const
-    let anAccount = <Account>{}; // an  empty object of type Property
+    const accounts = {} as Account[]; // an  empty object of type Property
 
     const newAccount: Account = {
       id: account.id,

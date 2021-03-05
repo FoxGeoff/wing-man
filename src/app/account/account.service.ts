@@ -4,7 +4,6 @@ import { Observable, throwError } from 'rxjs';
 import { map, filter, catchError, tap } from 'rxjs/operators';
 import { Account } from '../data/interface/account';
 
-
 const httpOptions = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json',
@@ -20,6 +19,9 @@ export class AccountService {
 
   constructor(private http: HttpClient) { }
 
+  /** Alternative functions - ref. https://www.techiediaries.com/angular-inmemory-web-api/
+   * TODO: Re-factor DRY and use 'shared/repositoryService' and deprecate this service
+   */
   public getAccounts() {
     return this.http.get(this.accountesUrl);
   }
@@ -57,6 +59,16 @@ export class AccountService {
     // Return an observable with a user-facing error message.
     return throwError(
       'Something bad happened; please try again later.');
+  }
+
+  private createCompleteRoute = (route: string, envAddress: string) => {
+    return `${envAddress}/${route}`;
+  }
+
+  private generateHeaders = () => {
+    return {
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
+    };
   }
 
 }
