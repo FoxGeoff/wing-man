@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { InMemoryDbService, RequestInfo } from 'angular-in-memory-web-api';
 import { Observable } from 'rxjs';
-import { Account } from './interface/account';
+import { Account } from './Models/account';
 import { Product } from './interface/product';
 import { ProductCategory } from './interface/product-category';
 import { Supplier } from './interface/supplier';

@@ -9,6 +9,7 @@ import { AccountsComponent } from './accounts/accounts.component';
 import { AddAccountComponent } from './add-account/add-account.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { AccountsListComponent } from './accounts-list/accounts-list.component';
+import { AccountsTableComponent } from './accounts-table/accounts-table.component';
 
 
 
@@ -17,7 +18,8 @@ import { AccountsListComponent } from './accounts-list/accounts-list.component';
     AccountsComponent,
     AddAccountComponent,
     AccountDetailsComponent,
-    AccountsListComponent
+    AccountsListComponent,
+    AccountsTableComponent
   ],
   imports: [
     CommonModule,

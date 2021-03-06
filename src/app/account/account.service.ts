@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { map, filter, catchError, tap } from 'rxjs/operators';
-import { Account } from '../data/interface/account';
+import { Account } from '../data/Models/account';
 
 const httpOptions = {
   headers: new HttpHeaders({

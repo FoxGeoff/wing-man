@@ -1,5 +1,5 @@
 import { AccountModule } from '../account/account.module';
-import { Account } from './interface/account';
+import { Account } from './Models/account';
 
 export class AccountData {
 

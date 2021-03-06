@@ -1,5 +1,5 @@
 /* Defines the account entity */
-export interface Account {
+export class Account {
   id: number;
   name: string;
   website?: string;
