@@ -19,6 +19,7 @@ export class AccountsComponent implements OnInit, AfterViewInit {
   constructor(private reproService: RepositoryService) { }
 
   ngOnInit(): void {
+    this.accounts = null;
     this.getAllAccounts();
   }
 
@@ -26,7 +27,9 @@ export class AccountsComponent implements OnInit, AfterViewInit {
     this.reproService.getData('api/accounts')
       .subscribe(
         (data: Account[]) => {
+          if (data.length === 0) { return; }
           this.accounts = data;
+
           // debug
           console.log(`Accounts Page: ${JSON.stringify(data)}`);
         }

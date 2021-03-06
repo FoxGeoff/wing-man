@@ -4,8 +4,7 @@ import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 // chk box section
 import {SelectionModel} from '@angular/cdk/collections';
-// http client data
-import { RepositoryService } from 'src/app/shared/repository.service';
+
 import { Account } from '../../data/Models/account';
 
 /**
@@ -28,31 +27,10 @@ export class AccountsTableComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-
-  isNoData = true;
-
-  constructor(private reproService: RepositoryService) {
-
-    this.dataSource = new MatTableDataSource<Account>(this.accounts);
-
-  }
+  constructor() { }
 
   ngOnInit(): void {
-    // this.getAllAccounts();
-  }
-
-  getAllAccounts() {
-    this.reproService.getData('api/accounts')
-      .subscribe(
-        (data: Account[]) => {
-          this.accounts = data;
-          // debug
-          console.log(data);
-
-          this.dataSource = new MatTableDataSource(data);
-          this.isNoData = false;
-        }
-      );
+    this.dataSource = new MatTableDataSource<Account>(this.accounts);
   }
 
   ngAfterViewInit() {

@@ -11,7 +11,15 @@
       >
     </mat-toolbar>
 
+    <!--  waiting for data -->
+    <div *ngIf="!accounts">
+      <mat-spinner></mat-spinner>
+    </div>
+
     <!-- Table of accounts -->
-    <app-accounts-table [accounts]="accounts"></app-accounts-table>
+    <app-accounts-table
+      *ngIf="accounts"
+      [accounts]="accounts"
+    ></app-accounts-table>
   </div>
 </div>
