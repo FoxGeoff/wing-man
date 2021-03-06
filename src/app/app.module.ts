@@ -17,7 +17,7 @@ import { CoreModule } from './core/core.module';
   imports: [
     BrowserModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(DataService, {delay: 1000}),
+    HttpClientInMemoryWebApiModule.forRoot(DataService, {delay: 2000}),
     AppRoutingModule,
     BrowserAnimationsModule,
     CoreModule
