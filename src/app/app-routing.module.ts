@@ -22,7 +22,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  /** https://stackoverflow.com/questions/39601026/angular-2-scroll-to-top-on-route-change
+   * https://angular.io/api/router/ExtraOptions#scrollPositionRestoration
+   */
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

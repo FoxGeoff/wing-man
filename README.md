@@ -134,3 +134,5 @@ export class AppModule { }
 ### Task: Add Environment folder and files
 
 1. Ref. <https://github.com/CodeMazeBlog/angular-material-series/tree/material-table/ang-material-OwnerAccount/src>
+
+### Task: Add scroll on redirect ```RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})```
