@@ -21,11 +21,15 @@ const routes: Routes = [
   }
 ];
 
-/** https://stackoverflow.com/questions/39601026/angular-2-scroll-to-top-on-route-change
+/**
+ * NOT USED
+ *  https://stackoverflow.com/questions/39601026/angular-2-scroll-to-top-on-route-change
  * https://angular.io/api/router/ExtraOptions#scrollPositionRestoration
+ * USED
+ * https://stackoverflow.com/questions/44441089/angular4-scrolling-to-anchor
  */
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
