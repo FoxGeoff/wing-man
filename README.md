@@ -136,3 +136,7 @@ export class AppModule { }
 1. Ref. <https://github.com/CodeMazeBlog/angular-material-series/tree/material-table/ang-material-OwnerAccount/src>
 
 ### Task: Add scroll on redirect ```RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})```
+
+### Task: Add navigation to page anchor
+
+1. Ref. <https://stackoverflow.com/questions/36101756/angular2-routing-with-hashtag-to-page-anchor/36101788#36101788>

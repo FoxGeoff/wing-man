@@ -11,7 +11,7 @@ const routes: Routes = [
   }, {
     path: 'quotes',
     loadChildren: () => import('./quote/quote.module').then(m => m.QuoteModule)
-  },  {
+  }, {
     path: 'products',
     loadChildren: () => import('./product/product.module').then(m => m.ProductModule)
   }, {
@@ -21,11 +21,11 @@ const routes: Routes = [
   }
 ];
 
+/** https://stackoverflow.com/questions/39601026/angular-2-scroll-to-top-on-route-change
+ * https://angular.io/api/router/ExtraOptions#scrollPositionRestoration
+ */
 @NgModule({
-  /** https://stackoverflow.com/questions/39601026/angular-2-scroll-to-top-on-route-change
-   * https://angular.io/api/router/ExtraOptions#scrollPositionRestoration
-   */
-  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
