@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-contact',
@@ -7,8 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
-  ngOnInit(): void { }
+  forceNavigate(name: string) {
+    this.router.navigate(['/paragraph'], { fragment: name });
+  }
+
+  onAnchorClick() {
+    this.route.fragment.subscribe(f => {
+      const element = document.querySelector('#' + f);
+      console.log(element.id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  }
+
+  ngOnInit(): void {
+    this.router.navigate(['/contacts/add-contact'], {fragment: 'home'});
+    // this.onAnchorClick();
+  }
 
 }
