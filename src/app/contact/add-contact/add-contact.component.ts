@@ -25,8 +25,8 @@ export class AddContactComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.router.navigate(['/contacts/add-contact'], {fragment: 'home'});
-    // this.onAnchorClick();
+    // this.router.navigate(['/contacts/add-contact'], {fragment: 'home'});
+    this.onAnchorClick();
   }
 
 }
