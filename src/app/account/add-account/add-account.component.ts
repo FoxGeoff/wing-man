@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AccountService } from '../account.service';
+import { Account } from '../../data/Models/account';
 
 @Component({
   selector: 'app-add-account',
@@ -7,9 +10,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddAccountComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private accountService: AccountService,
+    private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  onClick() {
+    console.log('onClick');
+    this.router.navigate(['/contacts/add-contact'] );
+  }
+
+  saveAccount(formValues: any): void {
+    const newAccount: Account = formValues as Account;
+    console.log(JSON.stringify(newAccount));
+    this.router.navigate(['/contacts/add-contact'], { fragment: 'home' });
+    /*
+     this.accountService.createAccount(newAccount)
+       .subscribe(
+         (data: Account) => console.log(data),
+         (err: any) => console.log(err),
+         () => this.router.navigate(['/contacts/add-contact'], {fragment: 'home'})
+       );
+    */
   }
 
 }
