@@ -9,11 +9,10 @@ import { ScrolltopService } from 'src/app/core/scrolltop.service';
 })
 export class AddContactComponent implements OnInit {
 
-  constructor(private scrolltopService: ScrolltopService) { }
+  constructor() { }
 
 
   ngOnInit(): void {
-    this.scrolltopService.setScrollTop();
   }
 
 }

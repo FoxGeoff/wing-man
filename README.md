@@ -171,6 +171,10 @@ export class AppModule { }
 
 ### Task: Convert to template form Add Account
 
-### Task: Add scrolltop service
+### Task: Add scrolltop service (doen't work)
 
 1. <https://auralinna.blog/post/2018/scroll-to-top-on-angular-route-change/>
+
+### Task: Add scroll to top on page load (smooth scrolling)
+
+1. Ref.<https://github.com/FoxGeoff/ScrollTop>

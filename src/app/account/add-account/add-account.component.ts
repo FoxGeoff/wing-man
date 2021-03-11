@@ -17,15 +17,10 @@ export class AddAccountComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onClick() {
-    console.log('onClick');
-    this.router.navigate(['/contacts/add-contact'] );
-  }
-
   saveAccount(formValues: any): void {
     const newAccount: Account = formValues as Account;
     console.log(JSON.stringify(newAccount));
-    this.router.navigate(['/contacts/add-contact'], { fragment: 'home' });
+    this.router.navigate(['/contacts/add-contact']);
     /*
      this.accountService.createAccount(newAccount)
        .subscribe(
