@@ -11,6 +11,32 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 5. Styling Applications with Angular Material <https://app.pluralsight.com/course-player?clipId=7bb21a82-ca21-46b5-ac8f-da93c462861e>
 6. Styling Applications with Angular Material <https://github.com/ajtowf/styling-applications-with-angular-material>
 
+### Best practices
+
+```Javascript
+/**
+ * CORE MODULE
+ * Core folder should contain singleton
+ * services shared throughout app
+ *
+ * Services that are specific to a feature can
+ * go in the feature's folder
+ *
+ * Example: LoggingService, ErrorService,
+ * DataSerice
+ */
+
+/**
+ * SHARED MODULE: Reusable components, pipes and directives
+ *
+ * Shared folder should contain reusable
+ * components, pipes and directives
+ *
+ * Example: CalendarComponent,
+ * AutoCompleteComponent
+ */
+```
+
 ### Task: Add Angular Material
 
 1. Ref: <https://material.angular.io/guide/getting-started>
@@ -143,4 +169,8 @@ export class AppModule { }
 2. Ref <https://stackblitz.com/edit/solution-anchor-scrolling?file=src%2Fapp%2Fproduct%2Fproduct.component.ts>
 3. ref <https://stackoverflow.com/questions/36101756/angular2-routing-with-hashtag-to-page-anchor>
 
-### Task: Convert to template form Add Account.
+### Task: Convert to template form Add Account
+
+### Task: Add scrolltop service
+
+1. <https://auralinna.blog/post/2018/scroll-to-top-on-angular-route-change/>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ScrolltopService } from 'src/app/core/scrolltop.service';
 
 @Component({
   selector: 'app-add-contact',
@@ -8,25 +9,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AddContactComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(private scrolltopService: ScrolltopService) { }
 
-  forceNavigate(name: string) {
-    this.router.navigate(['/paragraph'], { fragment: name });
-  }
-
-  onAnchorClick() {
-    this.route.fragment.subscribe(f => {
-      const element = document.querySelector('#' + f);
-      console.log(element.id);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  }
 
   ngOnInit(): void {
-    // this.router.navigate(['/contacts/add-contact'], {fragment: 'home'});
-    // this.onAnchorClick();
+    this.scrolltopService.setScrollTop();
   }
 
 }
