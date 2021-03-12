@@ -5,6 +5,7 @@ import { MaterialModule } from '../shared/material.module';
 import { SharedModule } from '../shared/shared.module';
 import { ContactsComponent } from './contacts/contacts.component';
 import { AddContactComponent } from './add-contact/add-contact.component';
+import { NgxScrollTopModule } from 'ngx-scrolltop';
 
 
 
@@ -14,7 +15,8 @@ import { AddContactComponent } from './add-contact/add-contact.component';
     CommonModule,
     MaterialModule,
     SharedModule,
-    ContactRoutingModule
+    ContactRoutingModule,
+    NgxScrollTopModule
   ]
 })
 export class ContactModule { }

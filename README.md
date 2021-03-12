@@ -179,3 +179,8 @@ export class AppModule { }
 
 1. Ref.<https://github.com/FoxGeoff/ScrollTop>
 2. Ref. How to implement RouteReuseStrategy shouldDetach for specific routes in Angular 2 <https://stackoverflow.com/questions/41280471/how-to-implement-routereusestrategy-shoulddetach-for-specific-routes-in-angular#41515648>
+
+### Task: Add scroll to top button
+
+1. Ref. <https://github.com/bartholomej/ngx-scrolltop>
+2. run. ```ng add ngx-scrolltop```

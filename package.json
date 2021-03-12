@@ -25,6 +25,7 @@
     "angular-in-memory-web-api": "^0.11.0",
     "angular2-in-memory-web-api": "0.0.21",
     "ng2-avatar": "^2.3.1",
+    "ngx-scrolltop": "^2.3.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
