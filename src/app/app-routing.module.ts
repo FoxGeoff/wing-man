@@ -27,9 +27,11 @@ const routes: Routes = [
  * https://angular.io/api/router/ExtraOptions#scrollPositionRestoration
  * USED
  * https://stackoverflow.com/questions/44441089/angular4-scrolling-to-anchor
+ * REF
+ * https://angular.io/api/router/ExtraOptions
  */
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled' })],
+  imports: [RouterModule.forRoot(routes, { anchorScrolling: 'enabled', onSameUrlNavigation: 'reload' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

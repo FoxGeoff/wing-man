@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { ScrolltopService } from 'src/app/core/scrolltop.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-add-contact',
   templateUrl: './add-contact.component.html',
@@ -9,10 +7,27 @@ import { ScrolltopService } from 'src/app/core/scrolltop.service';
 })
 export class AddContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) {
+    this.router.routeReuseStrategy.shouldReuseRoute = () => {
+      return false;
+    };
+   }
 
 
   ngOnInit(): void {
   }
 
+  scrollTop() {
+    /* Temp (bad) fix for scroll Top Button */
+    window.location.reload();
+ /*
+    this.router.onSameUrlNavigation = 'reload';
+    this.router.navigate(['/contacts/add-contact'], { fragment: 'home' });
+
+    .finally(() => {
+      this.router.onSameUrlNavigation = 'ignore'; // Restore config after navigation completes
+    });
+
+  */
+  }
 }

@@ -20,7 +20,8 @@ export class AddAccountComponent implements OnInit {
   saveAccount(formValues: any): void {
     const newAccount: Account = formValues as Account;
     console.log(JSON.stringify(newAccount));
-    this.router.navigate(['/contacts/add-contact']);
+    this.router.navigate(['/contacts/add-contact'], {fragment: 'home'});
+
     /*
      this.accountService.createAccount(newAccount)
        .subscribe(

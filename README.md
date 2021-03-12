@@ -178,3 +178,4 @@ export class AppModule { }
 ### Task: Add scroll to top on page load (smooth scrolling)
 
 1. Ref.<https://github.com/FoxGeoff/ScrollTop>
+2. Ref. How to implement RouteReuseStrategy shouldDetach for specific routes in Angular 2 <https://stackoverflow.com/questions/41280471/how-to-implement-routereusestrategy-shoulddetach-for-specific-routes-in-angular#41515648>
