@@ -7,11 +7,7 @@ import { Router } from '@angular/router';
 })
 export class AddContactComponent implements OnInit {
 
-  constructor(private router: Router) {
-    this.router.routeReuseStrategy.shouldReuseRoute = () => {
-      return false;
-    };
-   }
+  constructor(private router: Router) { }
 
 
   ngOnInit(): void {
