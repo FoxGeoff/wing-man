@@ -183,4 +183,5 @@ export class AppModule { }
 ### Task: Add scroll to top button
 
 1. Ref. <https://github.com/bartholomej/ngx-scrolltop>
-2. run. ```ng add ngx-scrolltop```
+2. run. ```ng add ngx-scrolltop```.
+3. NOTE: Not working. Nedd to follow up
