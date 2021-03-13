@@ -1,4 +1,4 @@
-<div id="home" fxLayout="row" fxLayoutAlign="space-around start">
+<div class="container" id="home" fxLayout="row" fxLayoutAlign="space-around start">
   <div fxFlex="90%">
     <p>
       <a mat-button color="primary" routerLink="/accounts/account-details"
@@ -11,18 +11,21 @@
       </mat-toolbar>
     </p>
 
-    <form>
+    <form
+      #addContactForm="ngForm"
+      (ngSubmit)="saveAccount(addContactForm.value)"
+    >
       <p style="color: blueviolet">Contact Infomation</p>
       <p fxLayout="row" fxLayoutAlign="space-between">
         <mat-form-field fxFlex="45" appearance="standard">
           <mat-label>First Name</mat-label>
-          <input matInput placeholder="Placeholder" />
+          <input matInput placeholder="Placeholder" name="firstName" ngModel />
           <mat-icon matSuffix>person</mat-icon>
           <mat-hint>Hint</mat-hint>
         </mat-form-field>
         <mat-form-field fxFlex="45" appearance="standard">
           <mat-label>Last Name</mat-label>
-          <input matInput placeholder="Placeholder" />
+          <input matInput placeholder="Placeholder" name="lastName" ngModel />
           <mat-icon matSuffix>person</mat-icon>
           <mat-hint>Hint</mat-hint>
         </mat-form-field>
@@ -30,7 +33,7 @@
       <p>
         <mat-form-field fxFlex="100" appearance="standard">
           <mat-label>Job Description</mat-label>
-          <input matInput placeholder="Placeholder" />
+          <input matInput placeholder="Placeholder" name="jobDescription" ngModel />
           <mat-icon matSuffix>work</mat-icon>
           <mat-hint>hint</mat-hint>
         </mat-form-field>
@@ -39,7 +42,7 @@
       <p>
         <mat-form-field fxFlex="100" appearance="standard">
           <mat-label>Street</mat-label>
-          <input matInput placeholder="Placeholder" />
+          <input matInput placeholder="Placeholder" name="street" ngModel />
           <mat-icon matSuffix>street</mat-icon>
           <mat-hint>Hint</mat-hint>
         </mat-form-field>
@@ -47,7 +50,7 @@
       <p>
         <mat-form-field fxFlex="100" appearance="standard">
           <mat-label>Street 2</mat-label>
-          <input matInput placeholder="Placeholder" />
+          <input matInput placeholder="Placeholder" name="street2" ngModel />
           <mat-icon matSuffix>street</mat-icon>
           <mat-hint>Hint</mat-hint>
         </mat-form-field>
@@ -55,19 +58,19 @@
       <p fxLayout="row" fxLayoutAlign="space-between">
         <mat-form-field fxFlex="25" appearance="standard">
           <mat-label>City</mat-label>
-          <input matInput placeholder="Placeholder" />
+          <input matInput placeholder="Placeholder" name="city" ngModel />
           <mat-icon matSuffix>city</mat-icon>
           <mat-hint>Hint</mat-hint>
         </mat-form-field>
         <mat-form-field fxFlex="25" appearance="standard">
           <mat-label>State</mat-label>
-          <input matInput placeholder="Placeholder" />
+          <input matInput placeholder="Placeholder" name="state" ngModel />
           <mat-icon matSuffix>state</mat-icon>
           <mat-hint>Choose from the drop down list</mat-hint>
         </mat-form-field>
         <mat-form-field fxFlex="25" appearance="standard">
           <mat-label>Zip</mat-label>
-          <input matInput placeholder="Placeholder" />
+          <input matInput placeholder="Placeholder" name="zip" ngModel />
           <mat-icon matSuffix>zip</mat-icon>
           <mat-hint>Hint</mat-hint>
         </mat-form-field>
@@ -75,23 +78,8 @@
       <p>
         <mat-form-field fxFlex="100" appearance="standard">
           <mat-label>Country</mat-label>
-          <input matInput placeholder="Placeholder" />
+          <input matInput placeholder="Placeholder" name="country" ngModel />
           <mat-icon matSuffix>country</mat-icon>
-          <mat-hint>Choose from the drop down list</mat-hint>
-        </mat-form-field>
-      </p>
-      <p style="color: blueviolet">Account Infomation</p>
-      <p fxLayout="row" fxLayoutAlign="space-between">
-        <mat-form-field fxFlex="45" appearance="standard">
-          <mat-label>Tax ID Number</mat-label>
-          <input matInput placeholder="Placeholder" />
-          <mat-icon matSuffix>id</mat-icon>
-          <mat-hint>Hint</mat-hint>
-        </mat-form-field>
-        <mat-form-field fxFlex="45" appearance="standard">
-          <mat-label>Payment Terms</mat-label>
-          <input matInput placeholder="Placeholder" />
-          <mat-icon matSuffix>payment</mat-icon>
           <mat-hint>Choose from the drop down list</mat-hint>
         </mat-form-field>
       </p>
@@ -99,7 +87,7 @@
       <p>
         <mat-form-field fxFlex="100" appearance="standard">
           <mat-label>Email</mat-label>
-          <input matInput placeholder="Placeholder" />
+          <input matInput placeholder="Placeholder" name="email" ngModel />
           <mat-icon matSuffix>email</mat-icon>
           <mat-hint>Hint</mat-hint>
         </mat-form-field>
@@ -108,20 +96,14 @@
       <p>
         <mat-form-field fxFlex="100" appearance="standard">
           <mat-label>Phone</mat-label>
-          <input matInput placeholder="Placeholder" />
+          <input matInput placeholder="Placeholder" name="phone" ngModel />
           <mat-icon matSuffix>phone</mat-icon>
           <mat-hint>Hint</mat-hint>
         </mat-form-field>
       </p>
       <span fxLayoutGap="18px">
         <a mat-raised-button routerLink="/accounts">Cancel</a>
-        <a
-          mat-raised-button
-          color="primary"
-          routerLink="/accounts/account-details"
-          >Submit</a
-        >
-        <a>Before 'Submit' add an associated customer >></a>
+        <button mat-raised-button color="primary" type="submit">Submit</button>
       </span>
     </form>
   </div>
@@ -129,7 +111,7 @@
 
 <div class="custom-style">
   <!-- Temporary (bad) fix -->
-  <button mat-fab color="accent" (click)="scrollTop()">Top</button>
+  <button mat-fab color="accent" (click)="scrollTop()"><mat-icon>arrow_upward</mat-icon></button>
   <!-- Button Top -->
   <ngx-scrolltop
     [size]="50"
@@ -139,6 +121,5 @@
     position="left"
     theme="pink"
   >
-    Top
-  </ngx-scrolltop>
+^  </ngx-scrolltop>
 </div>

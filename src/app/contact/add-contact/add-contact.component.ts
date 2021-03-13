@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Contact } from 'src/app/data/Models/contact';
 @Component({
   selector: 'app-add-contact',
   templateUrl: './add-contact.component.html',
@@ -26,4 +27,11 @@ export class AddContactComponent implements OnInit {
 
   */
   }
+
+  saveAccount(formValues: any): void {
+    const newContact: Contact = formValues as Contact;
+    console.log(JSON.stringify(newContact));
+    // this.router.navigate(['/contacts/add-contact'], {fragment: 'home'});
+  }
+
 }

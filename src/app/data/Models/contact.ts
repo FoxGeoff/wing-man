@@ -1,8 +1,8 @@
 /* Defines the contact entity */
-export interface Contact {
+export class Contact {
   id: number;
   firstName: string;
-  LastName: string;
+  lastName: string;
   website?: string;
   jobDescription: string;
   street: string;
