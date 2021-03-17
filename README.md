@@ -185,3 +185,7 @@ export class AppModule { }
 1. Ref. <https://github.com/bartholomej/ngx-scrolltop>
 2. run. ```ng add ngx-scrolltop```.
 3. NOTE: Not working. Nedd to follow up
+
+### Task: Add CRUD to in-memory-db-api
+
+1. Ref. <https://oraclefrontovik.com/2020/01/19/angular-crud-1-in-memory-web-api-installation-and-configuration/>

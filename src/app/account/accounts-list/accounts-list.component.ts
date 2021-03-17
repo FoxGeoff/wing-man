@@ -27,7 +27,7 @@ export class AccountsListComponent implements OnInit {
 
     this.accountService.deleteAccount(id).subscribe((ret) => {
       console.log('Account deleted: ', ret);
-    })
+    });
   }
 
   updateAccount(account: Account) {
@@ -52,7 +52,7 @@ export class AccountsListComponent implements OnInit {
       paymentTerms: '30Net',
       email: 'sales@acme-carpet.com',
       phone: 619333475
-    }
+    };
 
     this.accountService.updateAccount(newAccount).subscribe((ret) => {
       console.log('Account updated: ', ret);

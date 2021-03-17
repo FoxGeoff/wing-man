@@ -18,7 +18,7 @@ export class AccountsTableComponent implements OnInit, AfterViewInit {
 
   @Input() accounts: Account[];
 
-  displayedColumns: string[] = ['select', 'name', 'description', 'details', 'update', 'delete'];
+  displayedColumns: string[] = ['select', 'name', 'description', 'actions'];
   dataSource: MatTableDataSource<Account>;
   selection = new SelectionModel<Account>(true, []);
 

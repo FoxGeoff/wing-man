@@ -44,7 +44,6 @@ import {MatMenuModule} from '@angular/material/menu';
     MatSortModule,
     FlexLayoutModule,
     MatRadioModule,
-
     MatMenuModule
   ]
 })
