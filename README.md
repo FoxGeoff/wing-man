@@ -189,3 +189,7 @@ export class AppModule { }
 ### Task: Add CRUD to in-memory-db-api
 
 1. Ref. <https://oraclefrontovik.com/2020/01/19/angular-crud-1-in-memory-web-api-installation-and-configuration/>
+
+### Task: mat-table column widths
+
+1. Ref. <https://www.freakyjolly.com/angular-material-table-column-width-customization/>
