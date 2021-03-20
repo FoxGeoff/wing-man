@@ -195,3 +195,5 @@ export class AppModule { }
 1. Ref. <https://www.freakyjolly.com/angular-material-table-column-width-customization/>
 
 ### Task: Add contacts.component.ts GUI and code
+
+### Task: Add contact data

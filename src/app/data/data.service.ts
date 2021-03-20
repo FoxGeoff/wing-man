@@ -10,6 +10,8 @@ import { ProductCategoryData } from './product-category-data';
 import { AccountData } from './account.data';
 import { ProductData } from './product-data';
 import { SupplierData } from './supplier-data';
+import { Contact } from './Models/contact';
+import { ContactData } from './Models/contact.data';
 
 
 @Injectable()
@@ -20,12 +22,14 @@ export class DataService implements InMemoryDbService {
     accounts: Account[],
     products: Product[],
     productCategories: ProductCategory[],
-    suppliers: Supplier[]
+    suppliers: Supplier[],
+    contacts: Contact[]
   } | Observable<{}> | Promise<{}> {
     const accounts = AccountData.accounts;
     const products = ProductData.products;
     const productCategories = ProductCategoryData.categories;
     const suppliers = SupplierData.suppliers;
-    return { accounts, products, productCategories, suppliers };
+    const contacts = ContactData.contacts;
+    return { accounts, products, productCategories, suppliers, contacts };
   }
 }

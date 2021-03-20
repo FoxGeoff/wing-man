@@ -11,7 +11,7 @@ export class Contact {
   state: string;
   zip: number;
   country: string;
-  email: number;
+  email: string;
   phone: number;
   accountId: number;
 }

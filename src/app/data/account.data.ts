@@ -1,4 +1,3 @@
-import { AccountModule } from '../account/account.module';
 import { Account } from './Models/account';
 
 export class AccountData {
