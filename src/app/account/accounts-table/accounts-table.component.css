@@ -37,3 +37,13 @@ table {
 .th-right{
   text-align: right;
 }
+
+/* ToolTip */
+.tooltip-host {
+  display: inline-flex;
+  align-items: center;
+  margin: 50px;
+}
+.select {
+  margin: 0 10px;
+}

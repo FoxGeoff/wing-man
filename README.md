@@ -193,3 +193,5 @@ export class AppModule { }
 ### Task: mat-table column widths
 
 1. Ref. <https://www.freakyjolly.com/angular-material-table-column-width-customization/>
+
+### Task: Add contacts.component.ts GUI and code

@@ -21,6 +21,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatRadioModule } from '@angular/material/radio';
 
 import {MatMenuModule} from '@angular/material/menu';
+import { MatTooltipModule } from '@angular/material/tooltip';
 @NgModule({
 
   exports: [
@@ -44,7 +45,8 @@ import {MatMenuModule} from '@angular/material/menu';
     MatSortModule,
     FlexLayoutModule,
     MatRadioModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTooltipModule
   ]
 })
 export class MaterialModule { }
