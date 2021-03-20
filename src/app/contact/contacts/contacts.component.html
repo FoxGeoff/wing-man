@@ -1,1 +1,14 @@
-<p>contacts works!</p>
+<mat-list>
+  <h3 mat-subheader>Contacts</h3>
+  <mat-list-item *ngFor="let folder of contacts">
+    <mat-icon mat-list-icon>account_circle</mat-icon>
+    <h2 mat-line> <strong>>> {{folder.email}}</strong></h2>
+    <h3 mat-line>{{folder.name}},</h3>
+    <h3 mat-line>{{folder.account}},</h3>
+    <h3 mat-line>{{folder.address}}</h3>
+    <p mat-line><small>updated: {{folder.updated | date}}</small></p>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+</mat-list>
+
+
