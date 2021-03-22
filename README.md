@@ -196,4 +196,6 @@ export class AppModule { }
 
 ### Task: Add contacts.component.ts GUI and code
 
-### Task: Add contact data
+### Task: Add contact data from in-mem-db-api
+
+### Task: Add back end node/express and Sqlite database
