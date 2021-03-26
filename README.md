@@ -198,4 +198,8 @@ export class AppModule { }
 
 ### Task: Add contact data from in-mem-db-api
 
+1. Add to in-mem-db-api, pass through server: <https://github.com/angular/in-memory-web-api/blob/master/README.md#pass-thru-to-a-live-server>
+
 ### Task: Add back end node/express and Sqlite database
+
+1. Reference code for node and db: /Github/Ai_Project2020-3/ai-client2020-rev3
